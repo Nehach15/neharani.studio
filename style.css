@@ -281,3 +281,21 @@ transition:.3s;
 .product-card button:hover{
 background:#d63384;
 }
+footer{
+background:linear-gradient(135deg,#e75480,#ffb6c1);
+color:white;
+padding:50px 20px;
+text-align:center;
+margin-top:80px;
+}
+
+footer h3{
+font-size:32px;
+margin-bottom:15px;
+}
+
+footer p{
+font-size:16px;
+line-height:1.8;
+opacity:.95;
+}
