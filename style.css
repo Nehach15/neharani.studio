@@ -909,3 +909,35 @@ header{
 
 
 }
+@media(max-width:768px){
+
+.hero{
+
+    flex-direction:column;
+    text-align:center;
+
+}
+
+
+.hero-content,
+.hero-image{
+
+    width:100%;
+
+}
+
+
+.hero h1{
+
+    font-size:35px;
+
+}
+
+
+.hero-image img{
+
+    height:350px;
+
+}
+
+}
