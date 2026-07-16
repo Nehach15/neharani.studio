@@ -1,507 +1,134 @@
+/* Google Font */
+
 *{
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:Arial,sans-serif;
+font-family:'Poppins',sans-serif;
 }
 
 body{
-background:linear-gradient(135deg,#fff7fb,#ffe4ef,#fff);
-color:#444;
-}
-
-header{
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:20px 60px;
-background:rgba(255,255,255,.85);
-backdrop-filter:blur(10px);
-position:sticky;
-top:0;
-box-shadow:0 5px 20px rgba(0,0,0,.08);
-}
-
-.logo{
-font-size:32px;
-font-weight:bold;
-color:#e75480;
-}
-
-nav a{
-text-decoration:none;
-margin:15px;
-color:#555;
-font-weight:bold;
-transition:.3s;
-}
-
-nav a:hover{
-color:#e75480;
-}
-
-.hero{
-.hero{
-background:linear-gradient(135deg,#fff0f6,#ffe4ef,#fff);
-padding:120px 20px;
-text-align:center;
-border-radius:0 0 60px 60px;
-}
-
-.hero h1{
-font-size:58px;
-color:#d63384;
-margin-bottom:20px;
-font-weight:700;
-}
-
-.hero p{
-font-size:22px;
-color:#666;
-max-width:700px;
-margin:auto;
-line-height:1.8;
-margin-bottom:30px;
-}
-
-.hero img{
-width:180px;
-height:180px;
-border-radius:50%;
-object-fit:cover;
-box-shadow:0 15px 35px rgba(214,51,132,.25);
-margin-bottom:25px;
-}
-
-.btn{
-display:inline-block;
-padding:15px 35px;
-background:#d63384;
-color:#fff;
-text-decoration:none;
-border-radius:50px;
-font-weight:bold;
-transition:.3s;
-}
-
-.btn:hover{
-background:#b91c6d;
-transform:translateY(-3px);
-}
-
-.hero img{
-width:220px;
-border-radius:50%;
-box-shadow:0 10px 30px rgba(231,84,128,.3);
-}
-
-.hero h1{
-font-size:52px;
-margin-top:25px;
-color:#e75480;
-}
-
-.hero p{
-font-size:20px;
-margin-top:15px;
-color:#666;
-}
-
-.btn{
-display:inline-block;
-margin-top:30px;
-padding:15px 40px;
-background:#e75480;
-color:white;
-text-decoration:none;
-border-radius:50px;
-font-size:18px;
-transition:.3s;
-}
-
-.btn:hover{
-background:#ff4f8a;
-transform:scale(1.05);
-}
-.categories{
-padding:70px 30px;
-text-align:center;
-}
-
-.categories h2{
-font-size:40px;
-color:#e75480;
-margin-bottom:40px;
-}
-
-.category-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
-gap:25px;
-}
-
-.card{
-background:white;
-padding:30px;
-border-radius:20px;
-box-shadow:0 10px 20px rgba(0,0,0,.08);
-font-size:20px;
-transition:.3s;
-cursor:pointer;
-}
-
-.card:hover{
-transform:translateY(-10px);
-box-shadow:0 15px 30px rgba(231,84,128,.25);
-}
-.products{
-padding:70px 30px;
-text-align:center;
-}
-
-.products h2{
-font-size:40px;
-color:#e75480;
-margin-bottom:40px;
-}
-
-.product-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:30px;
-}
-
-.product-card{
-background:white;
-padding:20px;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.1);
-}
-
-.product-card img{
-width:100%;
-height:220px;
-object-fit:cover;
-border-radius:15px;
-}
-
-.product-card h3{
-margin:15px 0;
-color:#444;
-}
-
-.product-card p{
-color:#e75480;
-font-size:20px;
-font-weight:bold;
-}
-
-.product-card button{
-margin-top:15px;
-padding:12px 30px;
-border:none;
-border-radius:30px;
-background:#e75480;
-color:white;
-cursor:pointer;
-}
-.contact{
-padding:70px 20px;
-text-align:center;
-background:#fff0f6;
-}
-
-.contact h2{
-font-size:40px;
-color:#e75480;
-margin-bottom:20px;
-}
-
-.insta{
-background:#c13584;
-margin-left:10px;
-}
-
-footer{
-background:#e75480;
-color:white;
-text-align:center;
-padding:30px;
-}
-
-footer h3{
-font-size:30px;
-margin-bottom:10px;
-}
-.top-bar{
-background:#e75480;
-color:white;
-text-align:center;
-padding:12px;
-font-size:16px;
-font-weight:bold;
-letter-spacing:.5px;
-}
-
-.hero{
-position:relative;
-overflow:hidden;
-}
-
-.hero::before{
-content:"";
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:100%;
-background:linear-gradient(rgba(255,245,250,.90),rgba(255,255,255,.90));
-z-index:0;
-}
-
-.hero>*{
-position:relative;
-z-index:1;
-}
-
-.hero h1{
-font-size:60px;
-margin-bottom:20px;
-}
-
-.hero p{
-max-width:700px;
-margin:auto;
-line-height:1.8;
-}
-
-.btn{
-box-shadow:0 10px 25px rgba(231,84,128,.35);
-}
-.product-card{
-background:#fff;
-border-radius:20px;
-overflow:hidden;
-box-shadow:0 10px 30px rgba(0,0,0,.08);
-transition:.3s;
-}
-
-.product-card:hover{
-transform:translateY(-10px);
-box-shadow:0 20px 40px rgba(231,84,128,.25);
-}
-
-.product-card img{
-width:100%;
-height:260px;
-object-fit:cover;
-background:#f8f8f8;
-}
-
-.product-card h3{
-margin:15px;
-font-size:22px;
-}
-
-.product-card p{
-color:#e75480;
-font-size:22px;
-font-weight:bold;
-margin-bottom:15px;
-}
-
-.product-card button{
-background:#e75480;
-color:white;
-border:none;
-padding:12px 30px;
-border-radius:30px;
-margin-bottom:20px;
-cursor:pointer;
-transition:.3s;
-}
-
-.product-card button:hover{
-background:#d63384;
-}
-footer{
-<footer>
-
-<h3>Neha Rani Studio 🌸</h3>
-
-<p>
-Customized Gifts • Fashion • Bags • Jewellery • Bouquets • Accessories
-</p>
-
-<p>
-Made with ❤️ in Pakistan
-</p>
-
-<p>
-© 2026 Neha Rani Studio. All Rights Reserved.
-</p>
-
-</footer>
-.social-buttons{
-display:flex;
-justify-content:center;
-gap:20px;
-flex-wrap:wrap;
-margin-top:30px;
-}
-
-.whatsapp{
-background:#25D366;
-}
-
-.whatsapp:hover{
-background:#1da851;
-}
-
-.instagram{
-background:linear-gradient(45deg,#833AB4,#E1306C,#FCAF45);
-}
-
-.instagram:hover{
-opacity:.9;
-}
-
-.tiktok{
-background:#000;
-}
-
-.tiktok:hover{
-background:#222;
-}
-.btn i{
-margin-right:8px;
-font-size:20px;
-}
-.top-bar{
-background:#ffd6e7;
-color:#d63384;
-text-align:center;
-padding:12px;
-font-size:16px;
-font-weight:bold;
-}
-header{
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:15px 25px;
 background:#ffffff;
-box-shadow:0 2px 10px rgba(0,0,0,.08);
+color:#222;
+}
+
+/* Top Bar */
+
+.top-bar{
+background:#f8d7e8;
+color:#444;
+text-align:center;
+padding:10px;
+font-size:14px;
+font-weight:500;
+}
+
+/* Header */
+
+header{
+height:75px;
+background:#fff;
+display:flex;
+align-items:center;
+justify-content:space-between;
+padding:0 40px;
+box-shadow:0 2px 15px rgba(0,0,0,.05);
 position:sticky;
 top:0;
 z-index:999;
 }
 
-.menu-icon{
-font-size:30px;
+.menu-btn{
+font-size:28px;
 cursor:pointer;
-color:#d63384;
+color:#444;
 }
 
 .logo{
 font-size:28px;
-font-weight:bold;
+font-weight:700;
 color:#d63384;
-}
-
-.header-search{
-flex:1;
-margin:0 25px;
-}
-
-.header-search input{
-width:100%;
-padding:12px 18px;
-border:2px solid #ffd6e7;
-border-radius:30px;
-outline:none;
-font-size:16px;
+letter-spacing:.5px;
 }
 
 .header-icons{
 display:flex;
-gap:18px;
+gap:25px;
+font-size:22px;
+color:#555;
+cursor:pointer;
 }
 
-.header-icons a{
-text-decoration:none;
-font-size:24px;
+.header-icons i:hover{
+color:#d63384;
 transition:.3s;
 }
 
-.header-icons a:hover{
-transform:scale(1.2);
-}
-.floating-whatsapp{
-position:fixed;
-bottom:25px;
-right:25px;
-width:65px;
-height:65px;
-background:#25D366;
-color:white;
-border-radius:50%;
+/* Search */
+
+.search-box{
+padding:25px;
+background:#fff;
 display:flex;
 justify-content:center;
+}
+
+.search-box input{
+width:70%;
+max-width:700px;
+height:55px;
+border:none;
+outline:none;
+background:#fafafa;
+border-radius:40px;
+padding:0 25px;
+font-size:16px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+/* Hero */
+
+.hero{
+height:600px;
+background:linear-gradient(rgba(255,255,255,.35),rgba(255,255,255,.35)),
+url("images/banner/banner.jpg");
+background-size:cover;
+background-position:center;
+display:flex;
 align-items:center;
-font-size:34px;
+padding-left:8%;
+}
+
+.hero-content{
+max-width:550px;
+}
+
+.hero h1{
+font-size:58px;
+line-height:1.2;
+color:#222;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:18px;
+color:#555;
+margin-bottom:35px;
+line-height:1.8;
+}
+
+.shop-btn{
+display:inline-block;
+background:#d63384;
+color:white;
+padding:16px 38px;
+border-radius:50px;
 text-decoration:none;
-box-shadow:0 8px 20px rgba(0,0,0,.25);
-z-index:9999;
+font-weight:600;
 transition:.3s;
 }
 
-.floating-whatsapp:hover{
-transform:scale(1.12);
-background:#1ebe5d;
-}
-.why-us{
-padding:80px 20px;
-background:#fff5fa;
-text-align:center;
-}
-
-.why-us h2{
-font-size:42px;
-color:#d63384;
-margin-bottom:50px;
-}
-
-.features{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:30px;
-max-width:1200px;
-margin:auto;
-}
-
-.feature{
-background:white;
-padding:35px;
-border-radius:20px;
-box-shadow:0 10px 25px rgba(0,0,0,.08);
-transition:.3s;
-}
-
-.feature:hover{
-transform:translateY(-8px);
-}
-
-.feature{
-font-size:20px;
-}
-
-.feature h3{
-margin:20px 0 10px;
-color:#d63384;
-}
-
-.feature p{
-color:#666;
-line-height:1.7;
+.shop-btn:hover{
+background:#b81d6f;
+transform:translateY(-3px);
 }
