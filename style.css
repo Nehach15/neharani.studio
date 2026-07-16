@@ -1182,3 +1182,152 @@ grid-template-columns:1fr;
 }
 
 }
+/* ===========================
+ Gift Banner
+=========================== */
+
+
+.gift-banner{
+
+margin:90px 8%;
+padding:90px 30px;
+background:linear-gradient(135deg,#fde2ef,#fff);
+border-radius:35px;
+text-align:center;
+
+}
+
+
+.gift-content h2{
+
+font-size:45px;
+margin-bottom:20px;
+
+}
+
+
+.gift-content p{
+
+font-size:18px;
+color:#666;
+margin-bottom:35px;
+
+}
+
+
+
+/* ===========================
+ Reviews
+=========================== */
+
+
+.reviews{
+
+padding:90px 8%;
+background:#fff8fb;
+
+}
+
+
+.review-grid{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+
+}
+
+
+.review-card{
+
+background:white;
+padding:35px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,.07);
+text-align:center;
+
+}
+
+
+.stars{
+
+color:#d63384;
+font-size:22px;
+margin-bottom:20px;
+
+}
+
+
+.review-card p{
+
+color:#555;
+line-height:1.7;
+
+}
+
+
+.review-card h3{
+
+margin-top:20px;
+
+}
+
+
+
+/* ===========================
+ Instagram
+=========================== */
+
+
+.instagram{
+
+padding:90px 8%;
+
+}
+
+
+.instagram-grid{
+
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:20px;
+
+}
+
+
+.instagram-grid img{
+
+height:300px;
+width:100%;
+object-fit:cover;
+border-radius:20px;
+transition:.4s;
+
+}
+
+
+.instagram-grid img:hover{
+
+transform:scale(1.05);
+
+}
+
+
+
+@media(max-width:768px){
+
+.review-grid,
+.instagram-grid{
+
+grid-template-columns:1fr;
+
+}
+
+
+.gift-content h2{
+
+font-size:30px;
+
+}
+
+}
