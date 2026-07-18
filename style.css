@@ -2652,3 +2652,52 @@ font-size:18px;
 .swiper-button-prev{
     display: none !important;
 }
+/* ==========================
+PRODUCT GRID
+========================== */
+
+.products-wrapper{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:30px;
+
+}
+
+.product-item{
+
+    display:block;
+
+}
+
+@media(max-width:992px){
+
+.products-wrapper{
+
+grid-template-columns:repeat(3,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.products-wrapper{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:576px){
+
+.products-wrapper{
+
+grid-template-columns:1fr;
+
+}
+
+}
