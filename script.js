@@ -22,13 +22,33 @@ if (menuIcon && sidebar && overlay) {
 
 document.querySelectorAll(".sidebar a").forEach(link => {
 
-    link.addEventListener("click", () => {
+    link.addEventListener("click", function(e){
+
+        const target = this.getAttribute("href");
+
         sidebar.classList.remove("active");
         overlay.classList.remove("active");
+
+        if(target.startsWith("#")){
+
+            e.preventDefault();
+
+            const section = document.querySelector(target);
+
+            if(section){
+
+                section.scrollIntoView({
+                    behavior:"smooth",
+                    block:"start"
+                });
+
+            }
+
+        }
+
     });
 
 });
-
 
 // ==========================
 // HERO SLIDER
