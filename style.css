@@ -2847,4 +2847,32 @@ PRODUCT POPUP
 .close-product i{
     pointer-events:none;
 }
+.popup-gallery{
+    position:relative;
+}
 
+.popup-gallery img{
+    height:350px;
+    object-fit:cover;
+}
+
+.prev-img,
+.next-img{
+    position:absolute;
+    top:50%;
+    transform:translateY(-50%);
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    background:#d63384;
+    color:white;
+    font-size:20px;
+}
+
+.prev-img{
+    left:10px;
+}
+
+.next-img{
+    right:10px;
+}
