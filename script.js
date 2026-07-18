@@ -526,10 +526,11 @@ document.querySelectorAll(".product-card").forEach(card => {
 });
 
 
-closePopup.onclick = function () {
-    popup.classList.remove("active");
-};
-
+if(closePopup){
+    closePopup.onclick = function () {
+        popup.classList.remove("active");
+    };
+}
 popup.onclick = function(e){
     if(e.target === popup){
         popup.classList.remove("active");
