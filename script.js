@@ -488,59 +488,48 @@ document.querySelectorAll('a[href="#contact"]').forEach(link => {
     });
 
 });
-// ==========================
-// CATEGORY FILTER
-// ==========================
+const categoryLinks = document.querySelectorAll(".sidebar a");
+const products = document.querySelectorAll(".product-item");
 
-document.querySelectorAll(".sidebar a").forEach(link => {
+categoryLinks.forEach(link => {
 
-    link.addEventListener("click", function(e){
-
-        const category = this.getAttribute("href").replace("#","");
-
-        if(category === "contact") return;
+    link.onclick = function(e){
 
         e.preventDefault();
+
+        let category = this.getAttribute("href").replace("#","");
+
+        products.forEach(product=>{
+
+            if(product.dataset.category === category){
+                product.style.display = "block";
+            }else{
+                product.style.display = "none";
+            }
+
+        });
 
         document.getElementById("featured").scrollIntoView({
             behavior:"smooth"
         });
 
-        document.querySelectorAll(".product-item").forEach(item=>{
-
-            if(item.dataset.category === category){
-
-                item.style.display = "block";
-
-            }else{
-
-                item.style.display = "none";
-
-            }
-
-        });
-
-    });
+    }
 
 });
-
 
 // ==========================
 // VIEW ALL
 // ==========================
 
-document.getElementById("viewAllProducts").addEventListener("click",function(e){
+document.getElementById("viewAllProducts").onclick = function(e){
 
     e.preventDefault();
 
-    document.querySelectorAll(".product-item").forEach(item=>{
-
-        item.style.display="block";
-
+    products.forEach(product=>{
+        product.style.display="block";
     });
 
-});
-
+};
 
 // ==========================
 // VIEW ALL PRODUCTS
