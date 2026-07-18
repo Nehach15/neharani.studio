@@ -183,10 +183,15 @@ if (searchButton) {
 
         });
 
-        if (!found) {
-            alert("Product not found ❤️");
-        }
+       if (!found) {
 
+    document.querySelectorAll(".product-item").forEach(product => {
+        product.style.display = "block";
+    });
+
+    alert("No matching product found.");
+
+}
     });
 
 }
@@ -406,18 +411,25 @@ document.querySelectorAll('a[href="#contact"]').forEach(link => {
 // VIEW ALL BUTTON
 // ==========================
 
-document.querySelectorAll(".section-heading a").forEach(button => {
+const viewAll = document.getElementById("viewAllProducts");
 
-    button.addEventListener("click", (e) => {
+if (viewAll) {
+
+    viewAll.addEventListener("click", function(e){
 
         e.preventDefault();
 
-        alert("More products coming soon ❤️");
+        document.querySelectorAll(".product-item").forEach(product=>{
+            product.style.display = "block";
+        });
+
+        document.getElementById("featured").scrollIntoView({
+            behavior:"smooth"
+        });
 
     });
 
-});
-
+}
 
 // ==========================
 // CHECKOUT
