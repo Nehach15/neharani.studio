@@ -545,20 +545,22 @@ document.getElementById("viewAllProducts").onclick = function(e){
 // VIEW ALL PRODUCTS
 // ==========================
 
-const viewAllBtn=document.getElementById("viewAllProducts");
+const viewAll = document.getElementById("viewAllProducts");
 
-if(viewAllBtn){
+if (viewAll) {
 
-viewAllBtn.addEventListener("click",function(e){
+    viewAll.addEventListener("click", function(e){
 
-e.preventDefault();
+        e.preventDefault();
 
-allProducts.forEach(item=>{
+        products.forEach(product=>{
+            product.style.display = "block";
+        });
 
-item.style.display="block";
+        document.getElementById("featured").scrollIntoView({
+            behavior:"smooth"
+        });
 
-});
-
-});
+    });
 
 }
