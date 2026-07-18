@@ -92,58 +92,6 @@ if (document.querySelector(".categorySwiper")) {
 
 
 // ==========================
-// PRODUCT SLIDER
-// ==========================
-
-new Swiper(".productSwiper", {
-
-    loop: true,
-
-    speed: 700,
-
-    spaceBetween: 25,
-
-    grabCursor: true,
-
-    allowTouchMove: true,
-
-    simulateTouch: true,
-
-    touchRatio: 1,
-
-    touchAngle: 45,
-
-    freeMode: false,
-
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true
-    },
-
-    breakpoints: {
-
-        0:{
-            slidesPerView:1
-        },
-
-        576:{
-            slidesPerView:2
-        },
-
-        992:{
-            slidesPerView:3
-        },
-
-        1200:{
-            slidesPerView:4
-        }
-
-    }
-
-});
-
-// ==========================
 // BACK TO TOP BUTTON
 // ==========================
 
@@ -540,3 +488,60 @@ document.querySelectorAll('a[href="#contact"]').forEach(link => {
     });
 
 });
+// ==========================
+// PRODUCT FILTER
+// ==========================
+
+const filterLinks = document.querySelectorAll(".sidebar a");
+const allProducts = document.querySelectorAll(".product-item");
+
+filterLinks.forEach(link=>{
+
+    link.addEventListener("click",function(e){
+
+        const category=this.getAttribute("href").replace("#","");
+
+        if(category==="contact") return;
+
+        e.preventDefault();
+
+        allProducts.forEach(item=>{
+
+            if(item.dataset.category===category){
+
+                item.style.display="block";
+
+            }else{
+
+                item.style.display="none";
+
+            }
+
+        });
+
+    });
+
+});
+
+
+// ==========================
+// VIEW ALL PRODUCTS
+// ==========================
+
+const viewAllBtn=document.getElementById("viewAllProducts");
+
+if(viewAllBtn){
+
+viewAllBtn.addEventListener("click",function(e){
+
+e.preventDefault();
+
+allProducts.forEach(item=>{
+
+item.style.display="block";
+
+});
+
+});
+
+}
