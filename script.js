@@ -453,6 +453,36 @@ document.querySelectorAll('a[href="#contact"]').forEach(link => {
 
 });
 
+// ==========================
+// CATEGORY FILTER
+// ==========================
+
+const categoryLinks = document.querySelectorAll(".sidebar a");
+const products = document.querySelectorAll(".product-item");
+
+categoryLinks.forEach(link => {
+
+    link.addEventListener("click", function (e) {
+
+        const target = this.getAttribute("href").replace("#", "");
+
+        if (target === "contact") return;
+
+        e.preventDefault();
+
+        products.forEach(product => {
+
+            if (product.dataset.category === target) {
+                product.style.display = "block";
+            } else {
+                product.style.display = "none";
+            }
+
+        });
+
+    });
+
+});
 
 // ==========================
 // VIEW ALL BUTTON
@@ -540,3 +570,18 @@ document.querySelectorAll('a[href="#contact"]').forEach(link => {
     });
 
 });
+const viewAll = document.getElementById("viewAllProducts");
+
+if (viewAll) {
+
+    viewAll.addEventListener("click", function(e){
+
+        e.preventDefault();
+
+        products.forEach(product=>{
+            product.style.display="block";
+        });
+
+    });
+
+}
