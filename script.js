@@ -93,43 +93,40 @@ if (document.querySelector(".categorySwiper")) {
 // PRODUCT SLIDER
 // ==========================
 
-let productSwiper;
+new Swiper(".productSwiper", {
 
-if (document.querySelector(".productSwiper")) {
+    loop: true,
 
-    productSwiper = new Swiper(".productSwiper", {
+    spaceBetween: 25,
 
-        loop: true,
+    speed: 600,
 
-        spaceBetween: 25,
+    grabCursor: true,
 
-        speed: 700,
+    simulateTouch: true,
+    allowTouchMove: true,
 
-        grabCursor: true,
+    autoplay: {
+        delay: 3000,
+        disableOnInteraction: false
+    },
 
-        autoplay: {
-            delay: 3000,
-            disableOnInteraction: false
+    breakpoints: {
+        0: {
+            slidesPerView: 1
         },
-
-        navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev"
+        576: {
+            slidesPerView: 2
         },
-
-        breakpoints: {
-
-            0: { slidesPerView: 1 },
-            576: { slidesPerView: 2 },
-            992: { slidesPerView: 3 },
-            1200: { slidesPerView: 4 }
-
+        992: {
+            slidesPerView: 3
+        },
+        1200: {
+            slidesPerView: 4
         }
+    }
 
-    });
-
-}
-
+});
 
 // ==========================
 // BACK TO TOP BUTTON
