@@ -97,33 +97,46 @@ new Swiper(".productSwiper", {
 
     loop: true,
 
-    spaceBetween: 25,
+    speed: 700,
 
-    speed: 600,
+    spaceBetween: 25,
 
     grabCursor: true,
 
-    simulateTouch: true,
     allowTouchMove: true,
 
+    simulateTouch: true,
+
+    touchRatio: 1,
+
+    touchAngle: 45,
+
+    freeMode: false,
+
     autoplay: {
-        delay: 3000,
-        disableOnInteraction: false
+        delay: 2500,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true
     },
 
     breakpoints: {
-        0: {
-            slidesPerView: 1
+
+        0:{
+            slidesPerView:1
         },
-        576: {
-            slidesPerView: 2
+
+        576:{
+            slidesPerView:2
         },
-        992: {
-            slidesPerView: 3
+
+        992:{
+            slidesPerView:3
         },
-        1200: {
-            slidesPerView: 4
+
+        1200:{
+            slidesPerView:4
         }
+
     }
 
 });
