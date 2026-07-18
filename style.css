@@ -1753,23 +1753,17 @@ justify-content:center;
 }
 
 .whatsapp-btn{
-
-width:56px;
-
-height:56px;
-
-font-size:26px;
-
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
 }
 
 #topBtn{
-
-width:46px;
-
-height:46px;
-
-bottom:90px;
-
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    z-index: 1000;
 }
 
 }
