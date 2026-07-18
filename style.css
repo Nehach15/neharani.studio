@@ -2594,3 +2594,37 @@ font-size:18px;
     font-size:20px;
     z-index:1000;
 }
+/* FINAL BUTTON POSITION FIX */
+
+.whatsapp-btn{
+    position:fixed !important;
+    right:30px !important;
+    bottom:30px !important;
+    width:55px !important;
+    height:55px !important;
+    border-radius:50% !important;
+    background:#25D366 !important;
+    color:white !important;
+    display:flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+    font-size:28px !important;
+    z-index:999 !important;
+}
+
+
+#topBtn{
+    position:fixed !important;
+    right:30px !important;
+    bottom:110px !important;
+    width:50px !important;
+    height:50px !important;
+    border-radius:50% !important;
+    background:#d63384 !important;
+    color:white !important;
+    display:flex !important;
+    justify-content:center !important;
+    align-items:center !important;
+    font-size:20px !important;
+    z-index:1000 !important;
+}
