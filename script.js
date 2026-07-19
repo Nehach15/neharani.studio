@@ -650,3 +650,33 @@ if (popupCart) {
     });
 
 }
+const nextBtn = document.querySelector(".next-img");
+const prevBtn = document.querySelector(".prev-img");
+
+nextBtn.onclick = function () {
+
+    if (images.length === 0) return;
+
+    currentImage++;
+
+    if (currentImage >= images.length) {
+        currentImage = 0;
+    }
+
+    popupImg.src = images[currentImage];
+
+};
+
+prevBtn.onclick = function () {
+
+    if (images.length === 0) return;
+
+    currentImage--;
+
+    if (currentImage < 0) {
+        currentImage = images.length - 1;
+    }
+
+    popupImg.src = images[currentImage];
+
+};
