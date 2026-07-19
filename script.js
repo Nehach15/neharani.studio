@@ -716,7 +716,7 @@ if (prevBtn) {
             currentImage = productImages.length - 1;
         }
 
-        popupImage.src = productImages[currentImage];
+       popupImage.src = productImages[currentImage];
 
     };
 
@@ -734,7 +734,7 @@ if (nextBtn) {
             currentImage = 0;
         }
 
-        popupImage.src = productImages[currentImage];
+       popupImage.src = productImages[currentImage];
 
     };
 
