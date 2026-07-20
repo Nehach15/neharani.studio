@@ -2483,6 +2483,85 @@ ul{
 
 
 }
+/* ================= PRODUCT BUTTON FIX ================= */
 
+.product-actions{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    width:100%;
+}
+
+
+.product-actions .add-cart{
+
+    flex:1;
+    height:48px;
+    border-radius:30px;
+    background:#d63384;
+    color:white;
+    font-size:16px;
+    font-weight:600;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+}
+
+
+.whatsapp-btn{
+
+    position:fixed !important;
+
+    right:30px !important;
+    bottom:30px !important;
+
+    width:60px !important;
+    height:60px !important;
+
+    border-radius:50% !important;
+
+    background:#25D366 !important;
+
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+
+    font-size:30px !important;
+
+    z-index:9999 !important;
+
+}
+
+
+/* Product WhatsApp button */
+
+.buy-btn{
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:8px;
+
+    width:100%;
+
+    height:48px;
+
+    background:#25D366;
+
+    color:white;
+
+    border-radius:30px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    margin-top:10px;
+
+}
 
 /* ================= END ================= */
