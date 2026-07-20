@@ -111,3 +111,87 @@ Buy Now
 </div>
 
 </div>
+<script>
+
+let params = new URLSearchParams(window.location.search);
+
+let id = params.get("id");
+
+
+let products = {
+
+"gift-box":{
+
+name:"Luxury Gift Box",
+
+price:"Rs. 2,999",
+
+images:[
+"images/products/product1-1.jpg",
+"images/products/product1-2.jpg",
+"images/products/product1-3.jpg",
+"images/products/product1-4.jpg"
+]
+
+}
+
+};
+
+
+
+let product = products[id];
+
+
+if(product){
+
+document.getElementById("productName").innerText = product.name;
+
+document.getElementById("productPrice").innerText = product.price;
+
+document.getElementById("mainProductImage").src = product.images[0];
+
+
+document.getElementById("whatsappBtn").href =
+"https://wa.me/923045255325?text=I want to order " + product.name;
+
+}
+
+
+
+let currentImage = 0;
+
+
+function nextImage(){
+
+currentImage++;
+
+if(currentImage >= product.images.length){
+currentImage = 0;
+}
+
+document.getElementById("mainProductImage").src =
+product.images[currentImage];
+
+}
+
+
+
+function prevImage(){
+
+currentImage--;
+
+if(currentImage < 0){
+currentImage = product.images.length - 1;
+}
+
+document.getElementById("mainProductImage").src =
+product.images[currentImage];
+
+}
+
+
+</script>
+
+
+</body>
+</html>
