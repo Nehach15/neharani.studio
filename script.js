@@ -1,4 +1,3 @@
-alert("JS Working");
 /* ==========================================
    NEHA RANI STUDIO
    COMPLETE JAVASCRIPT
