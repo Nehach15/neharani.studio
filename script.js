@@ -209,3 +209,242 @@ alert("Added to Cart ✅");
 
 
 }
+// ================= PRODUCT DETAILS =================
+
+let params = new URLSearchParams(window.location.search);
+
+let productId = params.get("id");
+
+
+
+const products = {
+
+
+"gift-box":{
+
+name:"Luxury Gift Box",
+
+price:"Rs. 2,999",
+
+description:
+"Premium quality luxury gift box with beautiful packaging. Perfect for gifting and special occasions.",
+
+images:[
+
+"images/products/product1-1.jpg",
+"images/products/product1-2.jpg",
+"images/products/product1-3.jpg",
+"images/products/product1-4.jpg"
+
+]
+
+},
+
+
+
+"hand-bag":{
+
+name:"Elegant Hand Bag",
+
+price:"Rs. 3,999",
+
+description:
+"Stylish and elegant handbag with premium finishing.",
+
+images:[
+
+"images/products/product2.jpg",
+"images/products/product2-2.jpg",
+"images/products/product2-3.jpg"
+
+]
+
+},
+
+
+
+"dress-1":{
+
+name:"Beautiful Dress",
+
+price:"Rs. 4,999",
+
+description:
+"Premium fashion dress with elegant design.",
+
+images:[
+
+"images/products/product3.jpg",
+"images/products/product3-2.jpg",
+"images/products/product3-3.jpg"
+
+]
+
+},
+
+
+
+"perfume":{
+
+name:"Premium Perfume",
+
+price:"Rs. 2,499",
+
+description:
+"Long lasting premium fragrance.",
+
+images:[
+
+"images/products/product4.jpg",
+"images/products/product4-2.jpg"
+
+]
+
+}
+
+
+
+};
+
+
+
+let product = products[productId];
+
+let currentImage = 0;
+
+
+
+if(product){
+
+
+document.getElementById("productName").innerText = product.name;
+
+
+document.getElementById("productPrice").innerText = product.price;
+
+
+document.getElementById("productDescription").innerText = product.description;
+
+
+
+document.getElementById("mainProductImage").src =
+product.images[0];
+
+
+
+document.getElementById("whatsappBtn").href =
+
+"https://wa.me/923045255325?text=I want to order " 
++ product.name;
+
+
+
+}
+
+
+
+
+
+// ================= IMAGE SLIDER =================
+
+
+function nextImage(){
+
+
+if(!product) return;
+
+
+currentImage++;
+
+
+if(currentImage >= product.images.length){
+
+currentImage = 0;
+
+}
+
+
+
+document.getElementById("mainProductImage").src =
+product.images[currentImage];
+
+
+}
+
+
+
+
+
+function prevImage(){
+
+
+if(!product) return;
+
+
+currentImage--;
+
+
+if(currentImage < 0){
+
+currentImage = product.images.length - 1;
+
+}
+
+
+
+document.getElementById("mainProductImage").src =
+product.images[currentImage];
+
+
+}
+
+
+
+
+
+// ================= ADD TO CART =================
+
+
+const productAddCart =
+document.getElementById("productAddCart");
+
+
+
+if(productAddCart){
+
+
+productAddCart.onclick = function(){
+
+
+let cart =
+JSON.parse(localStorage.getItem("cart")) || [];
+
+
+
+cart.push({
+
+name:product.name,
+
+price:product.price,
+
+image:product.images[0]
+
+});
+
+
+
+localStorage.setItem(
+"cart",
+JSON.stringify(cart)
+);
+
+
+
+alert("Added to Cart ✅");
+
+
+};
+
+
+
+}
