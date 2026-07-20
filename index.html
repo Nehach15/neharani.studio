@@ -533,7 +533,8 @@ FEATURED PRODUCTS
 
 <div class="product-item" data-category="gift">
   
-<a href="product.html?id=gift-box" class="product-card"
+<div class="product-card"
+onclick="openProduct('gift-box')"
 data-images="images/products/product1-1.jpg,images/products/product1-2.jpg,images/products/product1-3.jpg,images/products/product1-4.jpg">
   
 <div class="product-image">
@@ -1284,6 +1285,13 @@ Buy on WhatsApp
 </div>
 
 </div>
+  <script>
+
+function openProduct(id){
+window.location.href = "product.html?id=" + id;
+}
+
+</script>
 <script src="script.js"></script>
 
 </body>
